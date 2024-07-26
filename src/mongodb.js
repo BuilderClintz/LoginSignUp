@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 
-mongoose.connect("mongodb://localhost:9000/LoginSignUpTutorial").then(()=>{
+mongoose.connect("mongodb+srv://wpcss001:iremide238@register-form.iclgq7s.mongodb.net/?retryWrites=true&w=majority&appName=Register-form").then(()=>{
     console.log("mongodb connected");
 })
 .catch(()=>{
@@ -19,7 +19,7 @@ const logInschema=new mongoose.Schema({
     }
 })
 
-const collection=new mongoose.model("collection1",logInschema)
+const collection=new mongoose.model("Collection1",logInschema)
 
 
-module.exports=collection
+module.exports = collection

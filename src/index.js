@@ -2,17 +2,20 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const hbs=require("hbs")
-const collection=require("mongodb")
+const collection = require("./mongodb")
 
-const templetePath=path.join(__dirname,'../templetes')
+
+
+
+const tempeletePath = path.join(__dirname,'../tempelates')
 
 app.use(express.json())
 app.set ("view engine","hbs")
-app.set("views",templetePath)
+app.set("views",tempeletePath)
 
 
 app.get("/", (req,res)=>{
-    res.render("login")
+    res.render("login.hbs")
 })
 
 app.get("/Signup", (req,res)=>{
