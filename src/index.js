@@ -12,14 +12,15 @@ const tempeletePath = path.join(__dirname,'../tempelates')
 app.use(express.json())
 app.set ("view engine","hbs")
 app.set("views",tempeletePath)
+app.use(express.urlencoded({extended:false}))
 
 
 app.get("/", (req,res)=>{
     res.render("login.hbs")
 })
 
-app.get("/Signup", (req,res)=>{
-    res.render("signup")
+app.get("/signup", (req,res)=>{
+    res.render("signup.hbs")
 })
 
 app.post("/signup", async (req,res)=>{
